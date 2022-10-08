@@ -173,6 +173,7 @@ header a:active {
   padding: 100px 3%;
 }
 .thirds p {
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(100, 100, 100);
 }
