@@ -1,0 +1,79 @@
+@import 'reset';
+@import 'configs';
+@import 'button';
+@import 'header';
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+#bannerImage{
+
+    height: 300px;
+    background-image: url('https://www.worryfreeplumbing.com/wp-content/uploads/2020/03/Plumbing-Services-2.jpg');
+    background-position: center;
+    background-color: $orange;
+    border: 3px solid $primary-text-color;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    h1{
+
+        font-family: $font-stack;
+        font-size: 4rem;
+        font-weight: 700;
+        color: lighten($light-color,15%);
+        text-shadow: -3px 3px black;
+        background-color: $orange;
+        height: 80px;
+
+    }
+}
+
+section{
+    display: flex;
+    background: $light-color;
+
+    section{
+        height: 500px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+
+    }
+p{
+    font-family: $secondary-font;
+    color: $primary-text-color;
+}
+    
+}
+.crop{
+
+    max-height: 200px;
+    max-width: 300px;
+    overflow: hidden;
+    border: solid $orange 5px;
+    box-shadow: -1px 3px 8px $primary-text-color;
+
+    img{
+
+        width: 400px;
+
+    }
+}
+b{
+    font-weight: 700;
+    color: $orange;
+}
+h4{
+    font-family: $font-stack;
+    height: 50px;
+    font-size: 1.7rem;
+    color: $primary-text-color;
+    margin-top: 20px;
+}

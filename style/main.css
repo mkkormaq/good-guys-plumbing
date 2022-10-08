@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  height: 70px;
+  width: 220px;
+  border: none;
+  color: #4b4b4b;
+  background: rgb(236, 161, 23);
+  border-radius: 15px;
+  box-shadow: -3px 3px 5px #3e3e3e;
+  font-size: 1.5rem;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  margin-right: 20px;
+}
+button:hover {
+  transform: scale(0.98);
+  background: #f0b446;
+}
+button:active {
+  background: #f6d18d;
+  color: rgb(243, 242, 242);
+  box-shadow: -1.5px 1.5px 1px #3e3e3e;
+}
+
+header {
+  width: 100%;
+  color: rgb(100, 100, 100);
+  background-image: linear-gradient(-45deg, rgb(243, 242, 242), #f4c775 100%);
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7%;
+}
+header h2 {
+  font-family: "Monoton", cursive;
+  font-size: 3rem;
+  background: linear-gradient(45deg, red 10%, green, blue 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header nav {
+  width: 80%;
+  min-width: 458px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: inherit;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+header ul .fa-solid {
+  font-size: 1rem;
+  text-shadow: none;
+  margin-right: 5px;
+}
+header li {
+  margin: 0 10px;
+  font-size: 1.4rem;
+  font-family: "Chakra Petch", sans-serif;
+  text-shadow: -1px 1px 1px rgb(100, 100, 100);
+}
+header a {
+  color: rgb(236, 161, 23);
+  text-decoration: none;
+}
+header a:hover {
+  color: #a9720e;
+}
+header a:active {
+  color: #f6d18d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#bannerImage {
+  height: 300px;
+  background-image: url("https://www.worryfreeplumbing.com/wp-content/uploads/2020/03/Plumbing-Services-2.jpg");
+  background-position: center;
+  background-color: rgb(236, 161, 23);
+  border: 3px solid rgb(100, 100, 100);
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#bannerImage h1 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: -3px 3px black;
+  background-color: rgb(236, 161, 23);
+  height: 80px;
+}
+
+section {
+  display: flex;
+  background: rgb(243, 242, 242);
+}
+section section {
+  height: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+section p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(100, 100, 100);
+}
+
+.crop {
+  max-height: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  border: solid rgb(236, 161, 23) 5px;
+  box-shadow: -1px 3px 8px rgb(100, 100, 100);
+}
+.crop img {
+  width: 400px;
+}
+
+b {
+  font-weight: 700;
+  color: rgb(236, 161, 23);
+}
+
+h4 {
+  font-family: "Chakra Petch", sans-serif;
+  height: 50px;
+  font-size: 1.7rem;
+  color: rgb(100, 100, 100);
+  margin-top: 20px;
+}
