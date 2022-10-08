@@ -134,29 +134,34 @@ header a:active {
 }
 
 #bannerImage {
-  height: 300px;
+  height: 500px;
+  width: 100%;
   background-image: url("https://www.worryfreeplumbing.com/wp-content/uploads/2020/03/Plumbing-Services-2.jpg");
   background-position: center;
+  box-shadow: -5px 3px 10px black;
   background-color: rgb(236, 161, 23);
-  border: 3px solid rgb(100, 100, 100);
   justify-content: center;
   text-align: center;
   display: flex;
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 #bannerImage h1 {
   font-family: "Chakra Petch", sans-serif;
   font-size: 4rem;
   font-weight: 700;
   color: white;
-  text-shadow: -3px 3px black;
-  background-color: rgb(236, 161, 23);
-  height: 80px;
+  text-shadow: -3px 3px #4b4b4b;
+  background-color: rgba(236, 161, 23, 0.7);
+  padding: 20px 30px;
+  border: solid 3px #4b4b4b;
 }
 
 section {
   display: flex;
   background: rgb(243, 242, 242);
+  padding: 0 50px;
 }
 section section {
   height: 500px;
