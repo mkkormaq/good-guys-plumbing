@@ -201,3 +201,12 @@ label{
 #bannerImage, p, h3, h4{
     text-align: center;
 }
+
+footer>section{
+    background-color: $primary-text-color;
+    height: 200px;
+
+}
+footer>section>p{
+    color: $light-color;
+}
