@@ -7,12 +7,10 @@
 //     .catch(err => console.error(err))
 
 // Get the button:
-let mybutton = document.getElementById("myBtn");
+let mybutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
+window.onscroll = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {

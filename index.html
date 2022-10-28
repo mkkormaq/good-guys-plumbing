@@ -14,21 +14,19 @@
         <title>Good Guys Plumbing - ATL</title>
     </head>
     <body>
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-poo"></i></button>
         <header>
             <h2>GOOD GUYS PLUMBING</h2>
            <nav>
-                <ul>
-                    
+                <ul> 
                     <li><i class="fa-solid fa-wrench"></i><a href="#about">ABOUT US</a></li>
-                    
-                    <li><i class="fa-solid fa-poo"></i><a href="#services">SERVICES</a></li>
-                    
-                    <li><i class="fa-solid fa-toilet"></i><a href="#location">MAP</a></li>
-                    
+                    <li><i class="fa-solid fa-poo"></i><a href="#services">SERVICES</a></li>  
+                    <li><i class="fa-solid fa-toilet"></i><a href="#location">MAP</a></li>        
                     <li><i class="fa-solid fa-toilet-paper"></i><a href="#contact">CONTACT</a></li>
                 </ul>
-                <button>Schedule a Visit!</button>
+                <div>
+                    <span>Give us a call!<br><a href="tel:(770) 313-8290" id="phone-number">(770) 313-8290</a></span>
+                    <button>Schedule a Visit!</button>
+                </div>
             </nav>
         </header>
         <div id="bannerImage">
@@ -68,10 +66,11 @@
             
             <h3>Here's where you can find us</h3>
                 <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423426.9669260469!2d-84.55836298839533!3d33.99193838285064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5012196b7b053%3A0xa539292116b0f7d2!2sGood%20Guys%20Plumbing!5e0!3m2!1sen!2sus!4v1666912626873!5m2!1sen!2sus"  style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423426.9669260469!2d-84.55836298839533!3d33.99193838285064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5012196b7b053%3A0xa539292116b0f7d2!2sGood%20Guys%20Plumbing!5e0!3m2!1sen!2sus!4v1666912626873!5m2!1sen!2sus"  style="border:none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <section id="contact">
+            <h4>Having issues? Let us Know!</h4>
             <form action="POST">
                 <div id="user-info">
                     <div>
@@ -85,7 +84,7 @@
                 </div>
                 <div id="user-message">
                     <label for="message">Ask away:</label>
-                    <input type="text" id="message">
+                    <textarea type="text" id="message" placeholder="Type your message here..."></textarea>
                 </div>
                 <input type="submit" name="send" value="Let us know" id="send">
             </form>
@@ -95,6 +94,7 @@
                 <p>here's some stuff</p>
             </section>
         </footer>
+        <button onclick="topFunction()" id="topBtn" title="Scroll to top"><i class="fa-solid fa-poo"></i></button>
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -78,68 +78,50 @@ button:active, #send:active {
 
 #send {
   width: 100%;
-  margin-top: 40px;
+  margin: 40px 0 0 0;
 }
 
-#myBtn {
+#topBtn {
   display: none;
   position: fixed;
-  width: 100px;
+  width: 70px;
+  height: 70px;
   bottom: 20px;
   right: 30px;
   z-index: 2;
-  background-color: rgba(248, 218, 164, 0.7); /* Set a background color */
-  color: rgb(100, 100, 100); /* Text color */
+  background-color: rgba(248, 218, 164, 0.7);
+  color: rgb(100, 100, 100);
   padding: 15px;
-  border-radius: 40px;
+  border-radius: 50%;
 }
 
-#myBtn:hover {
+#topBtn:hover {
   background-color: rgba(240, 180, 70, 0.7);
 }
 
+@media (max-width: 646px) {
+  button {
+    width: 30vw;
+    font-size: 3.5vw;
+    height: 12vw;
+  }
+}
 header {
   width: 100%;
   color: rgb(100, 100, 100);
   background-image: linear-gradient(-45deg, rgb(243, 242, 242), #f4c775 100%);
-  height: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 7%;
+  padding: 0 2%;
 }
 header h2 {
   font-family: "Monoton", cursive;
-  font-size: 3rem;
+  font-size: 6vw;
   background: linear-gradient(45deg, red 10%, green, blue 70%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-header nav {
-  width: 80%;
-  min-width: 458px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  background-color: inherit;
-}
-header ul {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 15px;
-}
-header ul .fa-solid {
-  font-size: 1rem;
-  text-shadow: none;
-  margin-right: 5px;
-}
-header li {
-  margin: 0 10px;
-  font-size: 1.4rem;
-  font-family: "Chakra Petch", sans-serif;
-  text-shadow: -1px 1px 1px rgb(100, 100, 100);
 }
 header a {
   color: rgb(236, 161, 23);
@@ -150,6 +132,110 @@ header a:hover {
 }
 header a:active {
   color: #f6d18d;
+}
+
+nav {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: inherit;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  width: 100%;
+}
+ul .fa-solid {
+  font-size: 1rem;
+  text-shadow: none;
+  margin-right: 5px;
+}
+@media (max-width: 646px) {
+  ul .fa-solid {
+    font-size: 2.5vw;
+    margin-right: 0.5vw;
+    display: none;
+  }
+}
+
+li {
+  margin: 0 10px;
+  font-size: 1.4rem;
+  font-family: "Chakra Petch", sans-serif;
+  text-shadow: -1px 1px 1px rgb(100, 100, 100);
+}
+
+#phone-number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+nav > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+nav > div > span {
+  margin-right: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 1103px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0;
+    height: auto;
+  }
+  ul {
+    justify-content: center;
+  }
+  nav {
+    align-items: center;
+  }
+  nav > div {
+    justify-content: space-around;
+  }
+  header > h2 {
+    font-size: 11vw;
+  }
+}
+@media (max-width: 646px) {
+  li {
+    font-size: 4vw;
+    margin: 0 1vw;
+  }
+}
+#user-info, #user-info > div, #user-message, #bannerImage, form, .container, section, .thirds {
+  display: flex;
+}
+
+#user-info > div, #user-message, form, .container, #location, .thirds, #contact {
+  flex-direction: column;
+}
+
+#bannerImage, .container, .thirds {
+  justify-content: center;
+}
+
+#user-info {
+  justify-content: space-between;
+}
+
+#location, #bannerImage, .thirds, .container, #contact {
+  align-items: center;
+}
+
+#bannerImage, p, h3, h4, h2 {
+  text-align: center;
 }
 
 * {
@@ -167,6 +253,7 @@ body {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  background-image: linear-gradient(-120deg, rgb(243, 242, 242), #f4c775 150%);
 }
 
 @-webkit-keyframes fadeInAnimation {
@@ -189,12 +276,19 @@ body {
 #bannerImage {
   height: 400px;
   width: 100%;
-  background-image: url("https://www.worryfreeplumbing.com/wp-content/uploads/2020/03/Plumbing-Services-2.jpg");
+  background-image: url("assets/cropped-drawers-min.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: -20px 3px 10px grey, 20px 3px 10px grey;
   background-color: rgb(236, 161, 23);
   z-index: 1;
   position: relative;
+}
+@media (max-width: 698px) {
+  #bannerImage {
+    height: 50vw;
+  }
 }
 
 h1 {
@@ -203,13 +297,20 @@ h1 {
   font-weight: 700;
   color: white;
   text-shadow: -3px 3px #4b4b4b;
-  background-color: rgba(236, 161, 23, 0.7);
+  background-color: rgba(192, 130, 16, 0.7);
   padding: 20px 30px;
   border: solid 3px #4b4b4b;
 }
 
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(100, 100, 100);
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
 section {
-  background: rgb(243, 242, 242);
+  width: 100%;
   padding: 2%;
   justify-content: space-around;
 }
@@ -219,6 +320,34 @@ section {
   }
 }
 
+b {
+  font-weight: 700;
+  color: rgb(236, 161, 23);
+}
+
+h4 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.7rem;
+  color: rgb(100, 100, 100);
+  margin: 25px 0 20px 0;
+}
+
+h3 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 3.5rem;
+  color: rgb(243, 242, 242);
+  margin: 30px 0;
+}
+
+@media (max-width: 698px) {
+  h1, h2, h3 {
+    font-size: 8vw;
+  }
+}
+#services {
+  padding: 0 0 50px 0;
+}
+
 .thirds {
   padding: 50px 1%;
 }
@@ -226,13 +355,6 @@ section {
   .thirds {
     padding: 50px 1% 0 1%;
   }
-}
-
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(100, 100, 100);
-  line-height: 2rem;
-  font-size: 1.2rem;
 }
 
 .crop {
@@ -246,41 +368,20 @@ p {
   width: 400px;
 }
 
-b {
-  font-weight: 700;
-  color: rgb(236, 161, 23);
-}
-
-h4 {
-  font-family: "Chakra Petch", sans-serif;
-  height: 50px;
-  font-size: 1.7rem;
-  color: rgb(100, 100, 100);
-  margin: 25px 0 20px 0;
-}
-
-h3 {
-  font-family: "Chakra Petch", sans-serif;
-  height: 50px;
-  font-size: 3.5rem;
-  color: rgb(243, 242, 242);
-  margin: 30px 0;
-}
-
 #about {
   padding: 100px 0 50px 0;
 }
 #about h2 {
   font-family: "Chakra Petch", sans-serif;
-  height: 50px;
   font-size: 4rem;
   text-align: center;
   color: rgb(100, 100, 100);
   margin: 0 0 30px 0;
 }
-
-#location {
-  background-color: rgb(236, 161, 23);
+@media (max-width: 698px) {
+  #about h2 {
+    font-size: 8vw;
+  }
 }
 
 .container {
@@ -289,6 +390,12 @@ h3 {
   box-shadow: -1px 3px 8px rgb(100, 100, 100);
   padding: 50px;
   width: 85%;
+}
+
+#location {
+  background-color: #676767;
+  border-top: 5px rgb(236, 161, 23) double;
+  border-bottom: 5px rgb(236, 161, 23) double;
 }
 
 .line {
@@ -320,11 +427,12 @@ form, #user-info > div {
 }
 
 #user-info {
-  padding: 50px 0 20px 0;
+  padding: 20px 0 20px 0;
 }
 
 #subject, #user-email {
-  height: 40px;
+  height: 50px;
+  padding-left: 8px;
 }
 
 label {
@@ -338,30 +446,44 @@ label {
   height: 400px;
 }
 
-#user-info, #user-info > div, #user-message, #bannerImage, form, .container, section, .thirds {
-  display: flex;
+#message, #user-email, #subject {
+  background: #fdf7eb;
+  border: inset rgb(236, 161, 23) 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: black;
+}
+#message:focus, #user-email:focus, #subject:focus {
+  outline: none;
+  background: white;
 }
 
-#user-info > div, #user-message, form, .container, #location, .thirds {
-  flex-direction: column;
+#message {
+  padding: 8px;
 }
 
-#bannerImage, .container, .thirds {
-  justify-content: center;
+#contact h4 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+@media (max-width: 698px) {
+  #contact h4 {
+    font-size: 8vw;
+  }
 }
 
-#user-info {
-  justify-content: space-between;
+#contact {
+  padding: 50px 2%;
 }
 
-#location, #bannerImage, .thirds, .container {
-  align-items: center;
+@media (max-width: 1103px) {
+  form {
+    width: 80%;
+  }
+  #message {
+    height: 300px;
+  }
 }
-
-#bannerImage, p, h3, h4 {
-  text-align: center;
-}
-
 footer > section {
   background-color: rgb(100, 100, 100);
   height: 200px;

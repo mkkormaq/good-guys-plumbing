@@ -2,17 +2,20 @@
 @import 'configs';
 @import 'button';
 @import 'header';
+@import 'displays';
 
 *{
     box-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
+
   }
 body {
 	animation: fadeInAnimation ease 3s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+    background-image: linear-gradient(-120deg, $light-color, lighten($orange, 20%) 150%);;
 }
 
 @keyframes fadeInAnimation {
@@ -24,16 +27,23 @@ body {
 	}
 }
 
+//TOP BANNER IMAGE
+
 #bannerImage{
 
     height: 400px;
     width: 100%;
-    background-image: url('https://www.worryfreeplumbing.com/wp-content/uploads/2020/03/Plumbing-Services-2.jpg');
+    background-image: url('assets/cropped-drawers-min.jpg');
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: -20px 3px 10px grey, 20px 3px 10px grey;
     background-color: $orange;
     z-index: 1;
     position: relative;
+    @media(max-width: 698px){
+        height: 50vw;
+    }
 }
 
 h1{
@@ -42,28 +52,12 @@ h1{
     font-weight: 700;
     color: lighten($light-color,15%);
     text-shadow: -3px 3px darken($primary-text-color, 10%);
-    background-color: $orange-trans;
+    background-color: darken($orange-trans,10%);
     padding: 20px 30px;
     border: solid 3px darken($primary-text-color, 10%);
 }
 
-section{
-
-    background: $light-color;
-    padding: 2%;
-    justify-content: space-around;
-    @media(max-width: 964px){
-        flex-wrap: wrap;
-    }
-}
-
-.thirds{
-        
-    padding: 50px 1%;
-    @media (max-width: 964px){
-        padding: 50px 1% 0 1%;
-    }
-}
+// GENERAL STYLING
 
 p{
     font-family: $secondary-font;
@@ -71,7 +65,56 @@ p{
     line-height: 2rem;
     font-size: 1.2rem;
 }
+section{
 
+    width:100%;
+    padding: 2%;
+    justify-content: space-around;
+    @media(max-width: 964px){
+        flex-wrap: wrap;
+    }
+}
+
+b{
+
+    font-weight: 700;
+    color: $orange;
+
+}
+
+h4{
+
+    font-family: $font-stack;
+    font-size: 1.7rem;
+    color: $primary-text-color;
+    margin: 25px 0 20px 0;
+
+}
+h3{
+
+    font-family: $font-stack;
+    font-size: 3.5rem;
+    color: $light-color;
+    margin: 30px 0;
+
+}
+@media(max-width: 698px){
+    h1,h2,h3{
+        font-size: 8vw;
+    }
+}
+// SERVICES SECTION
+
+#services{
+    padding:0 0 50px 0;
+}
+.thirds{
+        
+    padding: 50px 1%;
+    @media (max-width: 964px){
+        padding: 50px 1% 0 1%;
+    }
+}
     
 .crop{
 
@@ -87,46 +130,23 @@ p{
 
     }
 }
-b{
 
-    font-weight: 700;
-    color: $orange;
 
-}
-
-h4{
-
-    font-family: $font-stack;
-    height: 50px;
-    font-size: 1.7rem;
-    color: $primary-text-color;
-    margin: 25px 0 20px 0;
-
-}
-h3{
-
-    font-family: $font-stack;
-    height: 50px;
-    font-size: 3.5rem;
-    color: $light-color;
-    margin: 30px 0;
-
-}
+//ABOUT SECTION
 
 #about{
     padding: 100px 0 50px 0;
 
     h2{
     font-family: $font-stack;
-    height: 50px;
     font-size: 4rem;
     text-align: center;
     color: $primary-text-color;
     margin: 0 0 30px 0;
+    @media(max-width: 698px){
+            font-size: 8vw;
+        }
     }
-}
-#location{
-    background-color: $orange;
 }
 
 .container{
@@ -135,6 +155,15 @@ h3{
     box-shadow: -1px 3px 8px $primary-text-color;
     padding: 50px;
     width: 85%;
+}
+
+
+// LOCATION SECTION
+
+#location{
+    background-color: darken(gray,10%);
+    border-top: 5px $orange double;
+    border-bottom: 5px $orange double;
 }
 .line{
     width: 75%;
@@ -154,17 +183,22 @@ iframe{
     margin-bottom: 50px;
 }
 
+
+//CONTACT SECTION
+
 form, #user-info > div{
     width: 50%;
 }
+
 #right-input{
     padding: 0 0 0 10px;
 }
 #user-info{
-    padding: 50px 0 20px 0;
+    padding: 20px 0 20px 0;
 }
 #subject, #user-email{
-    height: 40px;
+    height: 50px;
+    padding-left: 8px;
 }
 label{
     font-family: $font-stack;
@@ -176,31 +210,45 @@ label{
     height: 400px;
 }
 
-#user-info, #user-info>div, #user-message, #bannerImage,form, .container, section, .thirds{
-    display: flex;
+#message, #user-email, #subject{
+    background: lighten($orange, 45%);
+    border: inset $orange 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    &:focus{
+        outline: none;
+        background: lighten($orange, 50%);
+    }
 }
 
-#user-info>div, #user-message, form, .container,#location, .thirds{
-    flex-direction: column;
-}
-
-#bannerImage,.container,.thirds{
-    justify-content: center;
-}
-
-#user-info {
-    justify-content: space-between;
-}
-
-#location, #bannerImage, .thirds, .container{
-    align-items: center;
+#message{
+    padding: 8px;
 }
 
 
-
-#bannerImage, p, h3, h4{
-    text-align: center;
+#contact h4{
+    font-size: 3rem;
+    font-weight: 600;
+    @media(max-width: 698px){
+        font-size: 8vw;
+    }
 }
+
+#contact {
+    padding:50px 2%;
+}
+@media(max-width:1103px){
+    form{
+        width: 80%;
+    }
+    #message{
+        height: 300px;
+    }
+
+}
+
+// FOOTER
 
 footer>section{
     background-color: $primary-text-color;
@@ -210,3 +258,5 @@ footer>section{
 footer>section>p{
     color: $light-color;
 }
+
+

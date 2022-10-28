@@ -1,0 +1,23 @@
+#user-info, #user-info>div, #user-message, #bannerImage,form, .container, section, .thirds{
+    display: flex;
+}
+
+#user-info>div, #user-message, form, .container,#location, .thirds,#contact{
+    flex-direction: column;
+}
+
+#bannerImage,.container,.thirds{
+    justify-content: center;
+}
+
+#user-info {
+    justify-content: space-between;
+}
+
+#location, #bannerImage, .thirds, .container,#contact{
+    align-items: center;
+}
+
+#bannerImage, p, h3, h4,h2{
+    text-align: center;
+}

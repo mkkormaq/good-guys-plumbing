@@ -1,6 +1,6 @@
 $light-color: rgb(243, 242, 242);
 $orange: rgb(236, 161, 23);
-$orange-trans:  rgba(236, 161, 23, 0.7);
+$orange-trans:  rgba($orange, 0.7);
 $primary-text-color: rgb(100, 100, 100);
 $font-stack: 'Chakra Petch', sans-serif;
 $secondary-font: Arial, Helvetica, sans-serif;

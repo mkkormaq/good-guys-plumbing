@@ -31,22 +31,31 @@ button, #send{
 
 #send{
     width: 100%;
-    margin-top: 40px;
+    margin: 40px 0 0 0;
 }
 
-#myBtn {
+#topBtn {
     display: none; 
     position: fixed;
-    width: 100px;
+    width: 70px;
+    height: 70px;
     bottom: 20px; 
     right: 30px;
     z-index: 2;
-    background-color: lighten($orange-trans, 30%); /* Set a background color */
-    color: $primary-text-color; /* Text color */
+    background-color: lighten($orange-trans, 30%);
+    color: $primary-text-color;
     padding: 15px; 
-    border-radius: 40px; 
+    border-radius: 50%; 
 }
   
-#myBtn:hover {
+#topBtn:hover {
     background-color: lighten($orange-trans, 10%);
+}
+
+@media(max-width:646px){
+    button{
+        width:30vw;
+        font-size:3.5vw;
+        height: 12vw;
+    }
 }
