@@ -52,7 +52,7 @@ table {
   border-spacing: 0;
 }
 
-button {
+button, #send {
   height: 70px;
   width: 220px;
   border: none;
@@ -65,14 +65,39 @@ button {
   font-weight: 700;
   margin-right: 20px;
 }
-button:hover {
+button:hover, #send:hover {
   transform: scale(0.98);
   background: #f0b446;
 }
-button:active {
+button:active, #send:active {
   background: #f6d18d;
   color: rgb(243, 242, 242);
   box-shadow: -1.5px 1.5px 1px #3e3e3e;
+}
+
+#send {
+  width: 100%;
+  margin-top: 40px;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  width: 100px;
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(248, 218, 164, 0.7); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 40px; /* Rounded corners */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 header {
@@ -133,6 +158,36 @@ header a:active {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-animation: fadeInAnimation ease 3s;
+          animation: fadeInAnimation ease 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #bannerImage {
   height: 400px;
   width: 100%;
@@ -140,10 +195,6 @@ header a:active {
   background-position: center;
   box-shadow: -20px 3px 10px grey, 20px 3px 10px grey;
   background-color: rgb(236, 161, 23);
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  align-items: center;
   z-index: 1;
   position: relative;
 }
@@ -160,9 +211,8 @@ h1 {
 }
 
 section {
-  display: flex;
   background: rgb(243, 242, 242);
-  padding: 0 2%;
+  padding: 2%;
   justify-content: space-around;
 }
 @media (max-width: 964px) {
@@ -172,10 +222,6 @@ section {
 }
 
 .thirds {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 50px 1%;
 }
 @media (max-width: 964px) {
@@ -185,7 +231,6 @@ section {
 }
 
 p {
-  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(100, 100, 100);
   line-height: 2rem;
@@ -212,7 +257,6 @@ h4 {
   font-family: "Chakra Petch", sans-serif;
   height: 50px;
   font-size: 1.7rem;
-  text-align: center;
   color: rgb(100, 100, 100);
   margin: 25px 0 20px 0;
 }
@@ -221,7 +265,6 @@ h3 {
   font-family: "Chakra Petch", sans-serif;
   height: 50px;
   font-size: 3.5rem;
-  text-align: center;
   color: rgb(243, 242, 242);
   margin: 30px 0;
 }
@@ -240,17 +283,9 @@ h3 {
 
 #location {
   background-color: rgb(236, 161, 23);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2% 0;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: #fdf7eb;
   border: outset rgb(236, 161, 23) 5px;
   box-shadow: -1px 3px 8px rgb(100, 100, 100);
@@ -266,11 +301,65 @@ h3 {
 
 iframe {
   width: 100%;
-  height: 400px;
+  height: 100%;
   border: rgb(243, 242, 242) solid 3px;
+  margin: 0;
 }
 
 .map-container {
   width: 70%;
-  border: solid gray 3px;
+  height: 500px;
+  border: inset gray 7px;
+  margin-bottom: 50px;
+}
+
+form, #user-info > div {
+  width: 50%;
+}
+
+#right-input {
+  padding: 0 0 0 10px;
+}
+
+#user-info {
+  padding: 50px 0 20px 0;
+}
+
+#subject, #user-email {
+  height: 40px;
+}
+
+label {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5rem;
+  color: #4b4b4b;
+  margin-bottom: 10px;
+}
+
+#message {
+  height: 400px;
+}
+
+#user-info, #user-info > div, #user-message, #bannerImage, form, .container, section, .thirds {
+  display: flex;
+}
+
+#user-info > div, #user-message, form, .container, #location, .thirds {
+  flex-direction: column;
+}
+
+#bannerImage, .container, .thirds {
+  justify-content: center;
+}
+
+#user-info {
+  justify-content: space-between;
+}
+
+#location, #bannerImage, .thirds, .container {
+  align-items: center;
+}
+
+#bannerImage, p, h3, h4 {
+  text-align: center;
 }
