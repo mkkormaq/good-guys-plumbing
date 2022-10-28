@@ -181,6 +181,9 @@ iframe{
     height: 500px;
     border: inset gray 7px;
     margin-bottom: 50px;
+    @media(max-width: 850px){
+        height: 50vw;
+    }
 }
 
 
@@ -246,6 +249,17 @@ label{
         height: 300px;
     }
 
+}
+@media(max-width:575px){
+    #user-info{
+        flex-direction: column;
+    }
+    #right-input{
+        padding:10px 0 0 0;
+    }
+    #user-info>div{
+        width:100%;
+    }
 }
 
 // FOOTER
